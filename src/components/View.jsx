@@ -41,9 +41,9 @@ const View = ({uploadProductResponse}) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {allProducts.map(product => (
+                        {allProducts.map((product,index) => (
                             <tr key={product.id}>
-                                <td>{product.id}</td>
+                                <td>{index+1}</td>
                                 <td>{product.product}</td>
                                 <td><img src={product.image} alt={product.product} style={{ width: '80px', height: '80px', objectFit: 'cover' }} /></td>
                                 <td>{product.brand}</td>
