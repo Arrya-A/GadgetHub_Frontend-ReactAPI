@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { deleteProductAPI, getAllProductsAPI } from '../services/allAPI'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 
 const View = ({uploadProductResponse}) => {
@@ -49,7 +50,7 @@ const View = ({uploadProductResponse}) => {
                                 <td>{product.category}</td>
                                 <td>{product.price}</td>
                                 <td>
-                                    {/* <Link to={`/edit/${product.id}`} className="btn btn-outline-info me-2">EDIT</Link> */}
+                                    <Link to={`/edit/${product.id}`} className="btn btn-outline-info me-2">EDIT</Link>
                                     <button className="btn btn-outline-danger" onClick={() => removeProduct(product.id)}>DELETE</button>
                                 </td>
                             </tr>
